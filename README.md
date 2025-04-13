@@ -1,12 +1,51 @@
-# React + Vite
+# Aplikasi Catatan Harian Terenkripsi (Encrypted Daily Notes Application)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sebuah aplikasi web untuk mencatat dan menyimpan catatan harian Anda dengan aman menggunakan enkripsi. Dibangun dengan React dan Vite.
 
-Currently, two official plugins are available:
+## Fitur Utama
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📝 Buat, edit, dan hapus catatan harian
+- 🔍 Pencarian catatan berdasarkan kata kunci
+- 🔒 Enkripsi end-to-end untuk menjaga kerahasiaan catatan Anda
+- 💾 Penyimpanan lokal yang aman di perangkat Anda
+- 📱 Responsif dan dapat digunakan di berbagai perangkat
 
-## Expanding the ESLint configuration
+## Teknologi yang Digunakan
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** - Library JavaScript untuk membangun antarmuka pengguna
+- **Vite** - Build tool yang cepat untuk pengembangan modern
+- **TailwindCSS** - Framework CSS untuk desain yang cepat dan responsif
+- **PostCSS** - Tool untuk transformasi CSS
+
+## Cara Menggunakan
+
+1. Clone repositori ini ke komputer Anda
+2. Install dependencies dengan menjalankan `npm install`
+3. Jalankan aplikasi dalam mode pengembangan dengan `npm run dev`
+4. Buka browser dan akses `http://localhost:5173`
+
+## Struktur Proyek
+
+```
+src/
+  ├── components/        # Komponen React
+  │   ├── NoteForm.jsx       # Form untuk membuat/mengedit catatan
+  │   ├── NoteItem.jsx       # Tampilan individual catatan
+  │   ├── NoteModal.jsx      # Modal untuk melihat/mengedit catatan
+  │   ├── NotesContainer.jsx # Container untuk semua catatan
+  │   ├── SearchBar.jsx      # Komponen pencarian
+  │   └── SplashScreen.jsx   # Layar pembuka aplikasi
+  ├── assets/           # Aset statis seperti gambar
+  ├── App.jsx           # Komponen utama aplikasi
+  ├── App.css           # Gaya khusus untuk App
+  ├── index.css         # Gaya global
+  └── main.jsx          # Entry point aplikasi
+```
+
+## Keamanan
+
+Aplikasi ini menggunakan enkripsi untuk melindungi catatan Anda. Semua catatan dienkripsi di sisi klien sebelum disimpan secara lokal, sehingga tidak ada yang dapat membaca catatan Anda tanpa kunci enkripsi yang Anda tentukan.
+
+## Lisensi
+
+[MIT](https://choosealicense.com/licenses/mit/)
